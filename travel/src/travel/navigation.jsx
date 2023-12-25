@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../index.css";
+import { Link } from "react-router-dom";
 
 // Navbar function: Main navigation bar component
 function Navbar() {
@@ -30,15 +31,15 @@ function NavItems(props) {
   return (
     // Renders list items with anchor tags for each navigation item
     <li className="nav-item">
-      <a href="/Disclosure/">
+      <Link to="/">
         {props.home}
-      </a>
-      <a href="/Disclosure/signin">
+      </Link>
+      <Link to="/signin">
         {props.signin}
-      </a>
-      <a href="/Disclosure/create">
+      </Link>
+      <Link to="/create">
         {props.create}
-      </a>
+      </Link>
       <a href="https://nigeldwatkins.github.io/PortfolioReact/">
         {props.portfolio}
       </a>
@@ -71,19 +72,19 @@ function NavDrop() {
       {isDropdownOpen && (
         <ul className="dropdown-menu-list">
           <li className="list-tab">
-            <a href="/Disclosure/" className="list-name">
+            <Link to="/" className="list-name">
                 Home
-            </a>
+            </Link>
           </li>
           <li className="list-tab">
-            <a href="/Disclosure/signin" className="list-name">
+            <Link to="/signin" className="list-name">
                 Sign In
-            </a>
+            </Link>
           </li>
           <li className="list-tab">
-            <a href="/Disclosure/create" className="list-name">
+            <Link to="/create" className="list-name">
                 Create Account 
-            </a>
+            </Link>
           </li>
           <li className="list-tab">
             <a href="https://nigeldwatkins.github.io/PortfolioReact/" className="list-name">

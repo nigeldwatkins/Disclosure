@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Nav from "./navigation";
 import config from "./Endpoints/config";
 
@@ -105,7 +105,7 @@ const CreateSigninForm = () => {
 
                 <div className="no-account">
                     <p>Don't have an account?
-                        <a href="/Disclosure/create" className="no-account-link">Create Account</a>
+                        <Link to="/create" className="no-account-link">Create Account</Link>
                     </p>
                 </div>
             </form>

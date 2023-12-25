@@ -1,8 +1,10 @@
 {
   "name": "travel",
   "version": "0.1.0",
+  "homepage": "https://nigeldwatkins.github.io/Disclosure/",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
@@ -20,7 +22,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "homepage": "https://nigeldwatkins.github.io/Disclosure/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b build4react -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -42,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
   }
 }

@@ -8,7 +8,8 @@ import Profile from "./travel/authorized/profile";
 
 const basename = '/Disclosure';
 
-function App() {
+const App = () => {
+  
   return (
     <div>
       <Router basename={basename}>
