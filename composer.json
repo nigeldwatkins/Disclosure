@@ -1,0 +1,21 @@
+{
+    "name": "disclosure/php",
+    "description": "Php code for physical world",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nigel D. Watkins",
+            "email": "nigeldwatkins@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "nikic/fast-route": "^1.3",
+        "ext-mysqlnd": "*",
+        "firebase/php-jwt": "^6.10"
+    },
+    "scripts": {
+        "start": "php -S 0.0.0.0:$PORT -t public"
+    }
+}
