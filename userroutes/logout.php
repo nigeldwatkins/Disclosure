@@ -28,10 +28,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     http_response_code(200);
     echo json_encode(['message' => 'User logged out successfully']);
     exit();
-} else {
-    // Handle unsupported HTTP methods
-    http_response_code(405); // Method Not Allowed
-    echo json_encode(['message' => 'Method not allowed']);
-    exit();
 }
 ?>
