@@ -22,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
      
     setcookie('jwt_token', '', time() - 3600, '/', '.github.io', true, true);
 
+    header("Content-Type: application/json");
+
     // Returns success response 
     http_response_code(200);
     echo json_encode(['message' => 'User logged out successfully']);
