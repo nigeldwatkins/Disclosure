@@ -20,9 +20,7 @@ session_start();
 // Handles POST request for logging out
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
      
-    session_unset();
-
-    session_destroy();
+    setcookie('jwt_token', '', time() - 3600, '/', '.github.io', true, true);
 
     // Returns success response 
     http_response_code(200);
